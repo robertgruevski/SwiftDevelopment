@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct LoadingView: View {
+    
+    let message: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(spacing: 10) {
+            ProgressView()
+                .tint(.white)
+            Text(message)
+        }.padding(10)
+            .background(.gray)
+            .foregroundColor(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 16.0, style: .continuous))
     }
 }
 
 #Preview {
-    LoadingView()
+    LoadingView(message: "Sending...")
 }

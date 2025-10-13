@@ -6,13 +6,32 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		91F0BF252E9ACBAC00C7325E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 91F0BF242E9ACBAC00C7325E /* FirebaseAuth */; };
+		91F0BF272E9ACBAC00C7325E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 91F0BF262E9ACBAC00C7325E /* FirebaseFirestore */; };
+		91F0BF292E9ACBAC00C7325E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 91F0BF282E9ACBAC00C7325E /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		91F0BF132E9ACA8C00C7325E /* WhatsUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		91B841752E9AEC7000EDF2C0 /* Exceptions for "WhatsUp" folder in "WhatsUp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 91F0BF122E9ACA8C00C7325E /* WhatsUp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		91F0BF152E9ACA8C00C7325E /* WhatsUp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				91B841752E9AEC7000EDF2C0 /* Exceptions for "WhatsUp" folder in "WhatsUp" target */,
+			);
 			path = WhatsUp;
 			sourceTree = "<group>";
 		};
@@ -23,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91F0BF252E9ACBAC00C7325E /* FirebaseAuth in Frameworks */,
+				91F0BF272E9ACBAC00C7325E /* FirebaseFirestore in Frameworks */,
+				91F0BF292E9ACBAC00C7325E /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,8 +54,8 @@
 		91F0BF0A2E9ACA8C00C7325E = {
 			isa = PBXGroup;
 			children = (
-				91F0BF152E9ACA8C00C7325E /* WhatsUp */,
 				91F0BF142E9ACA8C00C7325E /* Products */,
+				91F0BF152E9ACA8C00C7325E /* WhatsUp */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +87,9 @@
 			);
 			name = WhatsUp;
 			packageProductDependencies = (
+				91F0BF242E9ACBAC00C7325E /* FirebaseAuth */,
+				91F0BF262E9ACBAC00C7325E /* FirebaseFirestore */,
+				91F0BF282E9ACBAC00C7325E /* FirebaseStorage */,
 			);
 			productName = WhatsUp;
 			productReference = 91F0BF132E9ACA8C00C7325E /* WhatsUp.app */;
@@ -94,6 +119,9 @@
 			);
 			mainGroup = 91F0BF0A2E9ACA8C00C7325E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				91F0BF232E9ACBAC00C7325E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 91F0BF142E9ACA8C00C7325E /* Products */;
 			projectDirPath = "";
@@ -256,6 +284,8 @@
 				DEVELOPMENT_TEAM = 5F83R7VYM5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhatsUp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "WhatsUp requires access to your camera.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,6 +318,8 @@
 				DEVELOPMENT_TEAM = 5F83R7VYM5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WhatsUp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "WhatsUp requires access to your camera.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -332,6 +364,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		91F0BF232E9ACBAC00C7325E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		91F0BF242E9ACBAC00C7325E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91F0BF232E9ACBAC00C7325E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		91F0BF262E9ACBAC00C7325E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91F0BF232E9ACBAC00C7325E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		91F0BF282E9ACBAC00C7325E /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91F0BF232E9ACBAC00C7325E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 91F0BF0B2E9ACA8C00C7325E /* Project object */;
 }

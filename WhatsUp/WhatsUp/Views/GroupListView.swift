@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct GroupListView: View {
+    
+    let groups: [Group]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(groups) { group in
+            NavigationLink {
+                GroupDetailView(group: group)
+            } label: {
+                HStack {
+                    Image(systemName: "person.2")
+                    Text(group.subject)
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    GroupListView()
+    GroupListView(groups: [])
 }

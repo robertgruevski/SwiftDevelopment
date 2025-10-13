@@ -8,11 +8,28 @@
 import SwiftUI
 
 struct PreviewImageView: View {
+    
+    let selectedImage: UIImage
+    var onCancel: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Image(uiImage: selectedImage)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+        }.overlay(alignment: .top) {
+            Button {
+                onCancel()
+            } label: {
+                Image(systemName: "multiply.circle.fill")
+                    .padding([.top], 10)
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+            }
+        }
     }
 }
 
 #Preview {
-    PreviewImageView()
+    PreviewImageView(selectedImage: UIImage(named: "sample")!, onCancel: { })
 }
